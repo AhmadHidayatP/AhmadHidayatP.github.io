@@ -1,3 +1,7 @@
+<?php
+session_start();
+$username = $_SESSION["username"];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,9 +65,14 @@ function myFunction() {
   </div>
  </div>
 </div>
-		<div style="padding-left:16px">
-        </div>
-	
+<div style="padding-left:16px">
+</div>
+	<div class="phppot-container">
+		<div class="page-header">
+			<span class="login-signup"><a href="index.php">Logout</a></span>
+		</div>
+		<div class="page-content">Welcome <?php echo $username;?></div>
+	</div>
 		<div class="jumbotron text-center">
 			<h1>Selamat Datang di Web Myfoodlist!</h1>
 				<p>Web ini menyediakan resep-resep makanan yang pastinya enak!</p>
