@@ -2,7 +2,7 @@ a {
   text-decoration: none;
 }
 body {
-  background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+  background: -webkit-linear-gradient(bottom, #4ddbff,#0099cc);
   background-repeat: no-repeat;
 }
 label {
@@ -10,7 +10,7 @@ label {
   font-size: 11pt;
 }
 #forgot-pass {
-  color: #2dbd6e;
+  color: #0099cc;
   font-family: "Raleway", sans-serif;
   font-size: 10pt;
   margin-top: 3px;
@@ -35,14 +35,14 @@ label {
   text-align: center;
 }
 #signup {
-  color: #2dbd6e;
+  color: #0099cc;
   font-family: "Raleway", sans-serif;
   font-size: 10pt;
   margin-top: 16px;
   text-align: center;
 }
 #submit-btn {
-  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  background: -webkit-linear-gradient(right, #4ddbff, #0099cc);
   border: none;
   border-radius: 21px;
   box-shadow: 0px 1px 8px #24c64f;
@@ -64,7 +64,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background: -webkit-linear-gradient(right, #4ddbff, #0099cc);
   height: 1px;
   width: 100%;
 }
@@ -75,7 +75,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background: -webkit-linear-gradient(right, #4ddbff, #0099cc);
   height: 2px;
   margin: -1.1rem auto 0 auto;
   width: 89px;
