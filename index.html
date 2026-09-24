@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ombriel | NASA Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0d17;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            animation: starMove 100s linear infinite;
+        }
+        @keyframes starMove { from { background-position: 0 0, 40px 60px, 130px 270px; } to { background-position: 550px 550px, 390px 410px, 680px 820px; } }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        .nasa-red { color: #FC3D21; }
+        .bg-nasa-red { background-color: #FC3D21; }
+        .border-nasa-red { border-color: #FC3D21; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .modal { transition: opacity 0.25s ease, visibility 0.25s ease; }
+        .modal.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .modal.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+        .btn-hover:hover { background: rgba(252, 61, 33, 0.15); border-color: #FC3D21; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 selection:bg-[#FC3D21] selection:text-white">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-2xl space-y-6">
+        
+        <!-- Hero Section -->
+        <header class="text-center space-y-2">
+            <p class="font-mono text-sm text-gray-400 tracking-widest">01. INITIATION SEQUENCE</p>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Hi, I'm <span class="nasa-red">Ombriel</span> 🚀</h1>
+            <p class="text-xl text-gray-300">Information Technology | AI & Data Systems</p>
+            <p class="font-mono text-sm text-gray-500 italic">"Ad Astra Per Aspera — Through hardships to the stars"</p>
+        </header>
+
+        <!-- Identity Snapshot -->
+        <section class="glass-panel rounded-xl p-6 space-y-4">
+            <h2 class="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest border-b border-gray-700 pb-2">Identity Snapshot</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <span class="text-gray-500 font-mono">HANDLE</span>
+                    <p class="font-semibold text-lg">@ombriel</p>
+                </div>
+                <div>
+                    <span class="text-gray-500 font-mono">ROLE</span>
+                    <p class="font-semibold text-lg">IT Professional & AI/ML Analyst</p>
+                </div>
+                <div>
+                    <span class="text-gray-500 font-mono">BASE</span>
+                    <p class="font-semibold text-lg">Indonesia 🇮🇩</p>
+                </div>
+                <div>
+                    <span class="text-gray-500 font-mono">STATUS</span>
+                    <p class="font-semibold text-lg flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Active Duty
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Menu (Togglers) -->
+        <section class="space-y-3">
+            <h2 class="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest px-1">Explore Modules</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <button onclick="openModal('modal-dashboard')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                    <span class="text-2xl mb-2 block">📊</span>
+                    <span class="font-bold block">Persona Dashboard</span>
+                    <span class="text-xs text-gray-400 font-mono">Skills & Focus Areas</span>
+                </button>
+                <button onclick="openModal('modal-mission')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                    <span class="text-2xl mb-2 block">🛰️</span>
+                    <span class="font-bold block">Mission Log</span>
+                    <span class="text-xs text-gray-400 font-mono">Education & Experience</span>
+                </button>
+                <button onclick="openModal('modal-comms')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                    <span class="text-2xl mb-2 block">📡</span>
+                    <span class="font-bold block">Comms & Contact</span>
+                    <span class="text-xs text-gray-400 font-mono">Direct Channels</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center pt-8 pb-4">
+            <p class="font-mono text-xs text-gray-600">© 2026 Ombriel. Built for the cosmos.</p>
+        </footer>
+    </main>
+
+    <!-- MODALS -->
+    <!-- Modal 1: Dashboard -->
+    <div id="modal-dashboard" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-dashboard', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-dashboard')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
+            <h3 class="text-2xl font-bold mb-4 nasa-red">Persona Dashboard</h3>
+            <div class="space-y-3 font-mono text-sm">
+                <p><span class="text-gray-400">FOCUS :</span> Backend Systems · Data Pipelines · Machine Learning</p>
+                <p><span class="text-gray-400">STRENGTH :</span> Analytical Problem Solving · Competitive Edge</p>
+                <p><span class="text-gray-400">OBJECTIVE :</span> Academic Excellence & Industry Innovation</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Mission Log -->
+    <div id="modal-mission" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-mission', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-mission')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
+            <h3 class="text-2xl font-bold mb-4 nasa-red">Mission Log</h3>
+            <div class="space-y-4 text-sm">
+                <div class="border-l-2 border-[#FC3D21] pl-4">
+                    <p class="font-bold text-white">D4 Information and Communication Technology</p>
+                    <p class="text-gray-400 font-mono">Politeknik Negeri Malang | 2026</p>
+                    <p class="text-gray-300 mt-1">Target: Best Graduate per Major. Active in virtual career events and tech communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Comms -->
+    <div id="modal-comms" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-comms', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-comms')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
+            <h3 class="text-2xl font-bold mb-4 nasa-red">Comms & Contact</h3>
+            <div class="space-y-3">
+                <a href="mailto:ahmadhidayatpermana202@gmail.com" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition">
+                    <span>📧</span> <span class="font-mono text-sm">ahmadhidayatpermana202@gmail.com</span>
+                </a>
+                <a href="https://github.com/Ombriel" target="_blank" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition">
+                    <span>🐙</span> <span class="font-mono text-sm">github.com/Ombriel</span>
+                </a>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+                    <span>📱</span> <span class="font-mono text-sm">+62 895-0173-4551</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            setTimeout(() => document.getElementById(id).classList.add('visible'), 10);
+        }
+        function closeModal(id, event) {
+            if (event && event.target !== event.currentTarget && event.type === 'click') return;
+            document.getElementById(id).classList.remove('visible');
+            setTimeout(() => document.getElementById(id).classList.add('hidden'), 250);
+        }
+    </script>
+</body>
+</html>
