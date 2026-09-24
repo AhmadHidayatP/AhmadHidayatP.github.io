@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ombriel | NASA Portfolio</title>
+    <title>Ahmad Hidayat Permana | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -17,7 +17,7 @@
                 radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
             background-size: 550px 550px, 350px 350px, 250px 250px;
             background-position: 0 0, 40px 60px, 130px 270px;
-            animation: starMove 100s linear infinite;
+            animation: starMove 120s linear infinite;
         }
         @keyframes starMove { from { background-position: 0 0, 40px 60px, 130px 270px; } to { background-position: 550px 550px, 390px 410px, 680px 820px; } }
         .font-mono { font-family: 'Space Mono', monospace; }
@@ -32,20 +32,22 @@
         .modal { transition: opacity 0.25s ease, visibility 0.25s ease; }
         .modal.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .modal.visible { opacity: 1; visibility: visible; pointer-events: auto; }
-        .btn-hover:hover { background: rgba(252, 61, 33, 0.15); border-color: #FC3D21; }
+        .btn-hover:hover { background: rgba(252, 61, 33, 0.15); border-color: #FC3D21; transform: translateY(-2px); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4 selection:bg-[#FC3D21] selection:text-white">
 
-    <!-- Main Container -->
     <main class="w-full max-w-2xl space-y-6">
         
         <!-- Hero Section -->
-        <header class="text-center space-y-2">
-            <p class="font-mono text-sm text-gray-400 tracking-widest">01. INITIATION SEQUENCE</p>
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Hi, I'm <span class="nasa-red">Ombriel</span> 🚀</h1>
-            <p class="text-xl text-gray-300">Information Technology | AI & Data Systems</p>
-            <p class="font-mono text-sm text-gray-500 italic">"Ad Astra Per Aspera — Through hardships to the stars"</p>
+        <header class="text-center space-y-3">
+            <p class="font-mono text-xs text-[#FC3D21] tracking-[0.2em] uppercase">01. Initiation Sequence</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Hi, I'm <span class="nasa-red">Hidayat</span> 🚀</h1>
+            <p class="text-lg md:text-xl text-gray-300 font-light">Business Analyst & Technical Strategist</p>
+            <p class="text-sm text-gray-400">AI/ML Analyst @ NASA GeneLab | Ex-Founding Engineer</p>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-400 mt-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Open to Opportunities
+            </div>
         </header>
 
         <!-- Identity Snapshot -->
@@ -53,98 +55,145 @@
             <h2 class="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest border-b border-gray-700 pb-2">Identity Snapshot</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div>
-                    <span class="text-gray-500 font-mono">HANDLE</span>
-                    <p class="font-semibold text-lg">@ombriel</p>
+                    <span class="text-gray-500 font-mono text-xs">HANDLE</span>
+                    <p class="font-semibold text-lg">@ahmadhidayatp</p>
                 </div>
                 <div>
-                    <span class="text-gray-500 font-mono">ROLE</span>
-                    <p class="font-semibold text-lg">IT Professional & AI/ML Analyst</p>
+                    <span class="text-gray-500 font-mono text-xs">EDUCATION</span>
+                    <p class="font-semibold text-lg">BASc Business Information Systems</p>
+                    <p class="text-xs text-[#FC3D21] font-mono">Politeknik Negeri Malang | GPA: 3.81/4.00</p>
                 </div>
                 <div>
-                    <span class="text-gray-500 font-mono">BASE</span>
-                    <p class="font-semibold text-lg">Indonesia 🇮🇩</p>
+                    <span class="text-gray-500 font-mono text-xs">BASE</span>
+                    <p class="font-semibold text-lg">Malang, East Java, Indonesia 🇮🇩</p>
                 </div>
                 <div>
-                    <span class="text-gray-500 font-mono">STATUS</span>
-                    <p class="font-semibold text-lg flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Active Duty
-                    </p>
+                    <span class="text-gray-500 font-mono text-xs">LANGUAGES</span>
+                    <p class="font-semibold text-lg">Indonesian (Native) · English (TOEIC 965)</p>
                 </div>
             </div>
         </section>
 
-        <!-- Explore Menu (Togglers) -->
+        <!-- Explore Menu -->
         <section class="space-y-3">
             <h2 class="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest px-1">Explore Modules</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <button onclick="openModal('modal-dashboard')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                <button onclick="openModal('modal-dashboard')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all duration-300">
                     <span class="text-2xl mb-2 block">📊</span>
-                    <span class="font-bold block">Persona Dashboard</span>
-                    <span class="text-xs text-gray-400 font-mono">Skills & Focus Areas</span>
+                    <span class="font-bold block text-sm">Persona Dashboard</span>
+                    <span class="text-xs text-gray-400 font-mono">Skills & Certifications</span>
                 </button>
-                <button onclick="openModal('modal-mission')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                <button onclick="openModal('modal-mission')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all duration-300">
                     <span class="text-2xl mb-2 block">🛰️</span>
-                    <span class="font-bold block">Mission Log</span>
-                    <span class="text-xs text-gray-400 font-mono">Education & Experience</span>
+                    <span class="font-bold block text-sm">Mission Log</span>
+                    <span class="text-xs text-gray-400 font-mono">Experience & Projects</span>
                 </button>
-                <button onclick="openModal('modal-comms')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all">
+                <button onclick="openModal('modal-comms')" class="glass-panel btn-hover border border-gray-700 rounded-lg p-4 text-left transition-all duration-300">
                     <span class="text-2xl mb-2 block">📡</span>
-                    <span class="font-bold block">Comms & Contact</span>
+                    <span class="font-bold block text-sm">Comms & Contact</span>
                     <span class="text-xs text-gray-400 font-mono">Direct Channels</span>
                 </button>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="text-center pt-8 pb-4">
-            <p class="font-mono text-xs text-gray-600">© 2026 Ombriel. Built for the cosmos.</p>
+            <p class="font-mono text-[10px] text-gray-600 tracking-widest">© 2026 AHMAD HIDAYAT PERMANA. BUILT FOR THE COSMOS.</p>
         </footer>
     </main>
 
-    <!-- MODALS -->
-    <!-- Modal 1: Dashboard -->
-    <div id="modal-dashboard" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-dashboard', event)">
-        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-dashboard')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
-            <h3 class="text-2xl font-bold mb-4 nasa-red">Persona Dashboard</h3>
-            <div class="space-y-3 font-mono text-sm">
-                <p><span class="text-gray-400">FOCUS :</span> Backend Systems · Data Pipelines · Machine Learning</p>
-                <p><span class="text-gray-400">STRENGTH :</span> Analytical Problem Solving · Competitive Edge</p>
-                <p><span class="text-gray-400">OBJECTIVE :</span> Academic Excellence & Industry Innovation</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2: Mission Log -->
-    <div id="modal-mission" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-mission', event)">
-        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-mission')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
-            <h3 class="text-2xl font-bold mb-4 nasa-red">Mission Log</h3>
+    <!-- MODAL 1: Dashboard -->
+    <div id="modal-dashboard" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="closeModal('modal-dashboard', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative max-h-[80vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-dashboard')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+            <h3 class="text-xl font-bold mb-4 nasa-red flex items-center gap-2">📊 Persona Dashboard</h3>
+            
             <div class="space-y-4 text-sm">
-                <div class="border-l-2 border-[#FC3D21] pl-4">
-                    <p class="font-bold text-white">D4 Information and Communication Technology</p>
-                    <p class="text-gray-400 font-mono">Politeknik Negeri Malang | 2026</p>
-                    <p class="text-gray-300 mt-1">Target: Best Graduate per Major. Active in virtual career events and tech communities.</p>
+                <div>
+                    <h4 class="font-mono text-xs text-gray-400 uppercase mb-2">Core Competencies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">Business Systems Analysis</span>
+                        <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">Python (ML/Regression)</span>
+                        <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">FAIR Data Principles</span>
+                        <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">Process Mapping & UML</span>
+                        <span class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs">Power BI & DAX</span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-4">
+                    <h4 class="font-mono text-xs text-gray-400 uppercase mb-2">Certifications & Awards</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-[#FC3D21]/10 border border-[#FC3D21]/30">
+                            <span class="text-xl">🏆</span>
+                            <div>
+                                <p class="font-bold text-white text-sm">Top 5 Most Outstanding Student</p>
+                                <p class="text-xs text-gray-400 font-mono">Politeknik Negeri Malang | 2024 & 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
+                            <span class="text-xl">📜</span>
+                            <div>
+                                <p class="font-bold text-white text-sm">Certified BAFC® & Scrum Fundamentals (SFC)</p>
+                                <p class="text-xs text-gray-400 font-mono">BALearning & SCRUMStudy | 2026</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3: Comms -->
-    <div id="modal-comms" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeModal('modal-comms', event)">
-        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-comms')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
-            <h3 class="text-2xl font-bold mb-4 nasa-red">Comms & Contact</h3>
-            <div class="space-y-3">
-                <a href="mailto:ahmadhidayatpermana202@gmail.com" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition">
-                    <span>📧</span> <span class="font-mono text-sm">ahmadhidayatpermana202@gmail.com</span>
-                </a>
-                <a href="https://github.com/Ombriel" target="_blank" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition">
-                    <span>🐙</span> <span class="font-mono text-sm">github.com/Ombriel</span>
-                </a>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-                    <span>📱</span> <span class="font-mono text-sm">+62 895-0173-4551</span>
+    <!-- MODAL 2: Mission Log -->
+    <div id="modal-mission" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="closeModal('modal-mission', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative max-h-[80vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-mission')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+            <h3 class="text-xl font-bold mb-4 nasa-red flex items-center gap-2">🛰️ Mission Log</h3>
+            
+            <div class="space-y-5 text-sm">
+                <!-- Exp 1: NASA -->
+                <div class="border-l-2 border-[#FC3D21] pl-4">
+                    <p class="font-bold text-white">AI/ML AWG Analyst</p>
+                    <p class="text-xs text-[#FC3D21] font-mono">NASA GeneLab | Sep 2026 - Present</p>
+                    <p class="text-gray-300 mt-1 text-xs leading-relaxed">Promoting FAIR data principles for space biology datasets. Providing user-centric feedback on open-source data visualization tools and participating in global syncs on AI/ML data governance in space life science.</p>
                 </div>
+                <!-- Exp 2: YC -->
+                <div class="border-l-2 border-gray-500 pl-4">
+                    <p class="font-bold text-white">Startup School Cohort Member</p>
+                    <p class="text-xs text-gray-400 font-mono">Y Combinator | Jun - Jul 2026</p>
+                    <p class="text-gray-300 mt-1 text-xs leading-relaxed">Applying rigorous YC frameworks to structure startup ideas, validate unit economics in real-time, and drive weekly execution rigor for measurable traction.</p>
+                </div>
+                <!-- Exp 3: IGC -->
+                <div class="border-l-2 border-gray-600 pl-4">
+                    <p class="font-bold text-white">Founding Engineer & Technical Assistant to CTO</p>
+                    <p class="text-xs text-gray-400 font-mono">PT International Guide Corps | Jan - Aug 2026</p>
+                    <p class="text-gray-300 mt-1 text-xs leading-relaxed">Architected core web infrastructure for a hiking platform (99% uptime). Accelerated product development by 30% as a strategic bridge between executive leadership and engineering teams.</p>
+                </div>
+                <!-- Exp 4: Inagata -->
+                <div class="border-l-2 border-gray-600 pl-4">
+                    <p class="font-bold text-white">Back End Developer</p>
+                    <p class="text-xs text-gray-400 font-mono">PT Ina Gata Persada | Jul - Dec 2025</p>
+                    <p class="text-gray-300 mt-1 text-xs leading-relaxed">Reduced revision cycles by ~25% via standardized API contracts. Delivered 10+ scalable backend microservices with zero critical bugs post-launch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: Comms -->
+    <div id="modal-comms" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="closeModal('modal-comms', event)">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-6 border-nasa-red relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-comms')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+            <h3 class="text-xl font-bold mb-4 nasa-red flex items-center gap-2">📡 Comms & Contact</h3>
+            <div class="space-y-3">
+                <a href="mailto:ahmadhidayatpermana202@gmail.com" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10 transition group">
+                    <span class="text-lg group-hover:scale-110 transition">📧</span> 
+                    <span class="font-mono text-xs md:text-sm text-gray-300 group-hover:text-white">ahmadhidayatpermana202@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmadhidayatp" target="_blank" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10 transition group">
+                    <span class="text-lg group-hover:scale-110 transition">💼</span> 
+                    <span class="font-mono text-xs md:text-sm text-gray-300 group-hover:text-white">linkedin.com/in/ahmadhidayatp</span>
+                </a>
+                <a href="https://www.github.com/AhmadHidayatP" target="_blank" class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10 transition group">
+                    <span class="text-lg group-hover:scale-110 transition">🐙</span> 
+                    <span class="font-mono text-xs md:text-sm text-gray-300 group-hover:text-white">github.com/AhmadHidayatP</span>
+                </a>
             </div>
         </div>
     </div>
